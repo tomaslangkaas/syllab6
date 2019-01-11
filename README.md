@@ -50,3 +50,25 @@ Note: These algorithms assume binary data with lengths that are a multiple of 8 
 1. Ignore all characters that are not defined by *syllab6*.
 2. For each valid character, append the corresponding binary string to the output.
 3. If the final binary output length is not a multiple of 8, right-trim until it is.
+
+## Examples
+
+Encoding the three octets 01001101 01100001 01101110:
+
+
+| 0100 | 11 | 0101 | 10 | 0001 | 01 | 1011 | 10 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| h | o | k | i | d | e | s | i |
+
+Encoding the two octets 01001101 01100001:
+
+| 0100 | 11 | 0101 | 10 | 0001 | 00 |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| h | o | k | i | d | a |
+
+Encoding the octet 01001101:
+
+
+| 0100 | 11 | 0100 | 00 |
+| :---: | :---: | :---: | :---: | 
+| h | o | h | a |
