@@ -42,8 +42,8 @@ Note: These algorithms assume binary data with lengths that are a multiple of 8 
 
 1. Process the input data 6 bits at a time. If the input data does not have a length which is a multiple of 6, right-pad with `0` until it does.
 2. For each chunk of 6 bits,
-3. append a consonant corresponding to the value of the first 4 bits to the output, and then
-4. append a vowel corresponding to the value of the last 2 bits to the output.
+   - append a consonant corresponding to the value of the first 4 bits to the output, and then
+   - append a vowel corresponding to the value of the last 2 bits to the output.
 
 ### pronouncable-to-binary conversion
 
