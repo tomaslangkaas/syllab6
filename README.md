@@ -36,14 +36,17 @@ Pronouncable representation of binary data
 
 ## Conversion algorithms
 
+Note: These algorithms assume binary data with lengths that are a multiple of 8 (octets).
+
 ### binary-to-pronouncable conversion
 
-1. Process the input data 6 bits at a time.
+1. Process the input data 6 bits at a time. If the input data does not have a length which is a multiple of 6, right-pad with `0` until it does.
 2. For each chunk of 6 bits,
-3. output a consonant corresponding to the value of the first 4 bits, and then
-4. output a vowel corresponding to the value of the last 2 bits.
+3. append a consonant corresponding to the value of the first 4 bits to the output, and then
+4. append a vowel corresponding to the value of the last 2 bits to the output.
 
 ### pronouncable-to-binary conversion
 
-1. Ignore all characters that are not defined by *syllab6*
-2. For each valid character, output the corresponding binary string.
+1. Ignore all characters that are not defined by *syllab6*.
+2. For each valid character, append the corresponding binary string to the output.
+3. If the final binary output length is not a multiple of 8, right-trim until it is.
