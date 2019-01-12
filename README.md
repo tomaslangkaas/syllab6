@@ -6,7 +6,7 @@ Pronouncable representation of binary data
 
 *syllab6* is designed to ease representation of binary data in human memory: Syllables are pronouncable and effectively stored in auditory memory, lowercase syllables are easily typed and easily stored in muscle memory, sequences of random syllables are likely to evoke meaning (by accidental similarity to real words) which additionally eases their memorability.
 
-The characters included in *syllab6* were specifically chosen to be pronouncably distinct (in English) and reduce the likelihood of misinterpretation. The characters `c`, `j`, `q`, `u`, `w`, and `x` were deliberately excluded because they may pronounced like or look similar to other characters.
+The characters included in *syllab6* were specifically chosen to generate pronouncably distinct syllables (in English) and reduce the likelihood of misinterpretation. The characters `c`, `j`, `q`, `u`, `w`, and `x` were deliberately excluded because they have several possible pronounciations or may pronounced like or look similar to other included characters.
 
 In *syllab6*, each syllable consists of one consonant (encoding 4 bits) followed by one vowel (encoding 2 bits). The tables below list the 20 characters of *syllab6*, with the corresponding binary value of each.
 
