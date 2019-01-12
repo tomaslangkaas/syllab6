@@ -2,7 +2,11 @@
 Pronouncable representation of binary data
 
 ## What it is
-*syllab6* is an encoding scheme for binary data, where two-character syllables encode 6 bits of binary data. Each syllable consists of a consonant (encoding 4 bits) followed by a vowel (encoding 2 bits). The tables below list the 20 characters of *syllab6*, with the corresponding binary value of each.
+*syllab6* is a pronouncable encoding scheme for binary data, where two-character syllables encode 6 bits of binary data. There are several use cases where arbitrary binary data needs to be represented in human memory for a shorter or longer period of time: Randomly generated cryptographic keys, numeric codes or identifiers to be entered into a system, spoken transfer of computer-generated codes. 
+
+*syllab6* is designed to ease representation of binary data in human memory: Syllables are pronouncable and effectively stored in auditory memory, lowercase syllables are easily typed and easily stored in muscle memory, sequences of random syllables are likely to evoke meaning (by similarity to real words) which additionally eases their memorability. 
+
+In *syllab6*, each syllable consists of a consonant (encoding 4 bits) followed by a vowel (encoding 2 bits). The tables below list the 20 characters of *syllab6*, with the corresponding binary value of each.
 
 ### Consonants
 
@@ -36,7 +40,9 @@ Pronouncable representation of binary data
 
 ## Conversion algorithms
 
-Note: These algorithms assume binary data with lengths that are a multiple of 8 (octets).
+*syllab6* encodes 6 bits of data in each syllable, and thus corresponds to a base 64 representation (where each distinct syllable represents a distinct base 64 digit). Thus, algorithms designed for converting between base64 and bytes (binary octets), can easily be modified to convert between *syllab6* and octets.
+
+The folowing are general descriptions of algorithms for converting between *syllab6* and binary octets:
 
 ### binary-to-pronouncable conversion
 
@@ -53,20 +59,20 @@ Note: These algorithms assume binary data with lengths that are a multiple of 8 
 
 ## Examples
 
-Encoding the three octets 01001101 01100001 01101110:
+Encoding three octets, 01001101 01100001 01101110 (requires no padding):
 
 
 | 0100 | 11 | 0101 | 10 | 0001 | 01 | 1011 | 10 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | h | o | k | i | d | e | s | i |
 
-Encoding the two octets 01001101 01100001:
+Encoding two octets, 01001101 01100001 (requires two padding bits):
 
 | 0100 | 11 | 0101 | 10 | 0001 | 00 |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | h | o | k | i | d | a |
 
-Encoding the octet 01001101:
+Encoding the octet 01001101 (requires four padding bits):
 
 
 | 0100 | 11 | 0100 | 00 |
