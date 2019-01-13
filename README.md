@@ -83,7 +83,7 @@ Encoding the octet 01001101 (requires four padding bits):
 | :---: | :---: | :---: | :---: | 
 | h | o | h | a |
 
-## Written presentation of *syllab6*&mdash;whitespace, punctuation, and case-sensitivity.
+## Written presentation of *syllab6*&mdash;whitespace, punctuation, and case-sensitivity
 
 Written presentations and string representations of *syllab6* allows all other types of characters to be inserted anywhere, characters not included in *syllab6* are always ignored when decoding. This allows *syllab6* text to be broken up in any way with whitespace, punctuation or other characters to improve readability and memorability. However, it is generally advised to present *syllab6* data in chunks of at most 4 syllables, as 4 syllables is easily retained in short-term memory without need for repetition. Four syllables also correspond to exactly 3 bytes (24 bits).
 
