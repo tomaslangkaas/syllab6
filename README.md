@@ -91,11 +91,23 @@ Written presentations and string representations of *syllab6* allows all other t
 
 ## Comparison to other human-readable presentations of binary data
 
+The table below presents different human-readable encodings of the same randomly generated 64 bits,
+`10100010 11001101 01111010 01100010 11100000 00010101 11000010 10000010`:
+
+| Encoding | Result |
+| -------- | ------ |
+| Hexadecimal | `a2 cd 7a 62 e0 15 c2 82`|
+| Base64 | `os16YuAVwoI=` |
+| Ascii (Z85) | `QrO0[&1:aX` |
+| syllab6 | `rasaveyi lasibake tarafa` |
+
+While the *syllab6* encoding is longer than the others, it is likely also easier to read, easier to type, easier to keep in short-term memory, and easier to memorize. If presented with a written presentation of arbitrary binary data that is to be manually entered into another system, all these benefits matter.
+
 ## Licensing and usage rights
 
-The *syllab6* encoding scheme is meant to be freely available to use in any way without any need for licensing or specific permission. To the best of my knowledge, there is no existing patent or copyright that prevents this.
+The *syllab6* encoding scheme is freely available to use in any way without any licensing fee or specific permission. To the best of my knowledge, there are no existing patents or other legal barriers that prevents this.
 
-The idea of representing binary data as pronouncable text is not new. However, the exact encoding scheme of *syllab6* is distinct (with its specific choice of included characters and values), as far as I know.
+The idea of representing binary data as pronouncable text is not new. However, as far as I know, the exact encoding scheme of *syllab6* is distinct (with its specific choice of included characters, values, and its specific design philosophy).
 
 ## Test vectors
 
