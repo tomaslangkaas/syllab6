@@ -81,7 +81,7 @@ Encoding the octet 01001101 (requires four padding bits):
 | :---: | :---: | :---: | :---: | 
 | h | o | h | a |
 
-## Written presentation of *syllable6*&mdash;whitespace and punctuation
+## Written presentation of *syllab6*&mdash;whitespace and punctuation
 
 Written presentations and string representations of *syllab6* allows all other types of characters to be inserted anywhere, characters not included in *syllab6* are always ignored when decoding. This allows *syllab6* text to be broken up in any way with whitespace, punctuation or other characters to improve readability and memorability. However, it is natural to present *syllab6* data in chunks of 4 syllables, as 4 syllables is easily retained in short-term memory without need for repetition and 4 syllables correspond to exactly 3 bytes (24 bits).
 
@@ -94,5 +94,96 @@ The *syllab6* encoding scheme is meant to be freely available to use in any way 
 The idea of representing binary data as pronouncable text is not new. However, the exact encoding scheme of *syllab6* is distinct (with its specific choice of included characters and values), as far as I know.
 
 ## Test vectors
+
+### Vector #1
+
+All 256 bytes from `00` to `ff`.
+
+Binary (hexadecimal):
+
+```
+00 01 02 03 ... ff
+```
+
+*syllab6*:
+
+```
+babadabi batahade benamafa biharafo bobavagi botebahe 
+danegaka dehelako dibepali ditetame donezana fahifano 
+febikapi fetinare finisasa fohiyaso gabodati gatohave 
+genomaya gihorayo gobovazi govabebe hapageda hekaledo 
+hidapefi hivatege hopazeha kakefeho kedekeki kevenele 
+kipesema kokeyemo ladideni lavihepe lepimera likirero 
+lodivesi lovobete mapogeva mekolevo midopeyi mivoteze 
+mopoziba nalafibo nefakidi neyanife nirasiga nolayigo 
+pafedihi payehike peremila pilerilo pofevimi poyibine 
+rarigipa relilipo rifipiri riyitise rorizita salofito 
+sefokivi seyoniye sirosiza soloyizo tagadobi tazahode 
+tesamofa timarofo togavogi tozebohe vasegoka vemeloko 
+vigepoli vizetome vosezona yamifono yegikopi yezinore 
+yisisosa yomiyoso zagodoti zazohove zesomoya zimoroyo 
+zogovozi zota
+```
+
+### Vector #2
+
+All 255 bytes from `01` to `ff`.
+
+Binary (hexadecimal):
+
+```
+01 02 03 04 ... ff
+```
+
+*syllab6*:
+
+
+```
+bahafabo bebakadi betanafe binasaga bohayago dabedahi 
+datehake denemala diheralo dobevami dotibane fanigapa 
+fehilapo fibipari fititase fonizata gahofato gebokavi 
+getonaye ginosaza gohoyazo hadadebi havahede hepamefa 
+hikarefo hodavegi hovebehe kapegeka kekeleko kidepeli 
+kiveteme kopezena lakifeno ledikepi levinere lipisesa 
+lokiyeso madodeti mavoheve mepomeya mikoreyo modovezi 
+moyabibe naragida nelalido nifapifi niyatige noraziha 
+palefiho pefekiki peyenile piresima poleyimo rafidini 
+rayihipe rerimira riliriro rofivisi royobite sarogiva 
+selolivo sifopiyi siyotize sorozoba tamafobo tegakodi 
+tezanofe tisasoga tomayogo vagedohi vazehoke vesemola 
+vimerolo vogevomi vozibone yasigopa yemilopo yigipori 
+yizitose yosizota zamofoto zegokovi zezonoye zisosoza 
+zomoyozo
+```
+
+### Vector #3
+
+All 254 bytes from `02` to `ff`.
+
+Binary (hexadecimal):
+
+```
+02 03 04 05 ... ff
+```
+
+*syllab6*:
+
+```
+banagada behalado bibapafi bitatage bonazaha dahefaho 
+debekaki detenale dinesama doheyamo fabidani fatihape 
+fenimara fihiraro fobivasi fotobate ganogava geholavo 
+gibopayi gitotaze gonozeba hakafebo hedakedi hevanefe 
+hipasega hokayego kadedehi kaveheke kepemela kikerelo 
+kodevemi kovibene lapigepa lekilepo lidiperi livitese 
+lopizeta makofeto medokevi mevoneye miposeza mokoyezo 
+nafadibi nayahide neramifa nilarifo nofavigi noyebihe 
+paregika peleliko pifepili piyetime porezina ralifino 
+refikipi reyinire ririsisa roliyiso safoditi sayohive 
+seromiya siloriyo sofovizi sozabobe tasagoda temalodo 
+tigapofi tizatoge tosazoha vamefoho vegekoki vezenole 
+visesoma vomeyomo yagidoni yazihope yesimora yimiroro 
+yogivosi yozobote zasogova zemolovo zigopoyi zizotoze 
+zosoza
+```
 
 ## Code
