@@ -6,7 +6,7 @@ Pronouncable representation of binary data
 
 *syllab6* is designed to ease representation of binary data in human memory: Syllables are pronouncable and effectively stored in auditory memory, lowercase syllables are easily typed and easily stored in muscle memory, sequences of random syllables are likely to evoke meaning (by accidental similarity to real words) which additionally eases their memorability.
 
-The characters included in *syllab6* were specifically chosen to generate pronouncably distinct syllables (in English) and reduce the likelihood of misinterpretation. The characters `c`, `j`, `q`, `u`, `w`, and `x` were deliberately excluded because they have several possible pronounciations or may pronounced like or look similar to other included characters.
+The characters included in *syllab6* were specifically chosen to generate pronouncably distinct syllables (in English) and reduce the likelihood of misinterpretation. The characters `c`, `j`, `q`, `u`, `w`, and `x` were deliberately excluded because they have several possible pronounciations or may be pronounced like or look similar to other included characters.
 
 In *syllab6*, each syllable consists of one consonant (encoding 4 bits) followed by one vowel (encoding 2 bits). The tables below list the 20 characters of *syllab6*, with the corresponding binary value of each.
 
@@ -44,7 +44,7 @@ In *syllab6*, each syllable consists of one consonant (encoding 4 bits) followed
 
 *syllab6* encodes 6 bits of data in each syllable, and thus corresponds to a base 64 representation (where each distinct syllable represents a distinct base 64 digit). Thus, algorithms designed for converting between base64 and bytes (binary octets), can easily be modified to convert between *syllab6* and octets.
 
-The folowing are general descriptions of algorithms for converting between *syllab6* and binary octets:
+The following are general descriptions of algorithms for converting between *syllab6* and binary octets:
 
 ### binary-to-pronouncable conversion
 
@@ -80,3 +80,19 @@ Encoding the octet 01001101 (requires four padding bits):
 | 0100 | 11 | 0100 | 00 |
 | :---: | :---: | :---: | :---: | 
 | h | o | h | a |
+
+## Written presentation of *syllable6*&mdash;whitespace and punctuation
+
+Written presentations and string representations of *syllab6* allows all other types of characters to be inserted anywhere, characters not included in *syllab6* are always ignored when decoding. This allows *syllab6* text to be broken up in any way with whitespace, punctuation or other characters to improve readability and memorability. However, it is natural to present *syllab6* data in chunks of 4 syllables, as 4 syllables is easily retained in short-term memory without need for repetition and 4 syllables correspond to exactly 3 bytes (24 bits).
+
+## Comparison to other human-readable presentations of binary data
+
+## Licensing and usage rights
+
+The *syllab6* encoding scheme is meant to be freely available to use in any way without any need for licensing or specific permission. To the best of my knowledge, there is no existing patent or copyright that prevents this.
+
+The idea of representing binary data as pronouncable text is not new. However, the exact encoding scheme of *syllab6* is distinct (with its specific choice of included characters and values), as far as I know.
+
+## Test vectors
+
+## Code
