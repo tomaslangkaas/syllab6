@@ -98,7 +98,7 @@ The table below presents different human-readable encodings of the same randomly
 | -------- | ------ |
 | Hexadecimal | `a2 cd 7a 62 e0 15 c2 82`|
 | Base64 | `os16YuAVwoI=` |
-| Ascii (Z85) | `QrO0[&1:aX` |
+| Ascii ([Z85](https://rfc.zeromq.org/spec:32/Z85/)) | `QrO0[&1:aX` |
 | syllab6 | `rasaveyi lasibake tarafa` |
 
 While the *syllab6* encoding is longer than the others, it is likely also easier to read, easier to type, easier to keep in short-term memory, and easier to memorize. If presented with a written presentation of arbitrary binary data that is to be manually entered into another system, all these benefits matter.
