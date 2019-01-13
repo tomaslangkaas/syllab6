@@ -2,7 +2,9 @@
 Pronouncable representation of binary data
 
 ## What it is
-*syllab6* is a pronouncable encoding scheme for binary data, where two-character syllables encode 6 bits of binary data. There are several use cases where arbitrary binary data needs to be represented in human memory for a shorter or longer period of time: Randomly generated cryptographic keys or passwords, computer-generated codes or identifiers to be entered manually into another system, spoken transfer of computer-generated codes or identifiers. 
+*syllab6* is a pronouncable encoding scheme for binary data, where two-character syllables encode 6 bits of binary data.
+
+There are several use cases where arbitrary binary data needs to be represented in human memory for a shorter or longer period of time: Randomly generated cryptographic keys or passwords, computer-generated codes or identifiers to be entered manually into another system, spoken transfer of computer-generated codes or identifiers. 
 
 *syllab6* is designed to ease representation of binary data in human memory: Syllables are pronouncable and effectively stored in auditory memory; lowercase syllables are easily read, easily typed and easily stored in muscle memory; sequences of random syllables are likely to evoke meaning (by accidental similarity to real words) which additionally eases their memorability.
 
@@ -42,9 +44,9 @@ In *syllab6*, each syllable consists of one consonant (encoding 4 bits) followed
 
 ## Conversion algorithms
 
-*syllab6* encodes 6 bits of data in each syllable, and thus corresponds to a base 64 representation (where each distinct syllable represents a distinct base 64 digit). Thus, algorithms designed for converting between base64 and bytes (binary octets), can easily be modified to convert between *syllab6* and octets.
+*syllab6* encodes 6 bits of data in each syllable, and thus corresponds to a base 64 representation (where each distinct syllable represents a distinct base 64 digit). Thus, algorithms designed for converting between base64 and bytes (binary octets) can easily be modified to convert between *syllab6* and bytes.
 
-The following are general descriptions of algorithms for converting between *syllab6* and binary octets:
+The following are general descriptions of algorithms for converting between *syllab6* and bytes (binary octets):
 
 ### binary-to-pronouncable conversion
 
@@ -83,7 +85,7 @@ Encoding the octet 01001101 (requires four padding bits):
 
 ## Written presentation of *syllab6*&mdash;whitespace, punctuation, and case-sensitivity.
 
-Written presentations and string representations of *syllab6* allows all other types of characters to be inserted anywhere, characters not included in *syllab6* are always ignored when decoding. This allows *syllab6* text to be broken up in any way with whitespace, punctuation or other characters to improve readability and memorability. However, it is advised to present *syllab6* data in chunks of 4 syllables, as 4 syllables is easily retained in short-term memory without need for repetition and 4 syllables correspond to exactly 3 bytes (24 bits).
+Written presentations and string representations of *syllab6* allows all other types of characters to be inserted anywhere, characters not included in *syllab6* are always ignored when decoding. This allows *syllab6* text to be broken up in any way with whitespace, punctuation or other characters to improve readability and memorability. However, it is generally advised to present *syllab6* data in chunks of at most 4 syllables, as 4 syllables is easily retained in short-term memory without need for repetition. Four syllables also correspond to exactly 3 bytes (24 bits).
 
 *syllab6* is case-sensitive, uppercase characters are always ignored. 
 
