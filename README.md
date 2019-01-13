@@ -4,7 +4,7 @@ Pronouncable representation of binary data
 ## What it is
 *syllab6* is a pronouncable encoding scheme for binary data, where two-character syllables encode 6 bits of binary data. There are several use cases where arbitrary binary data needs to be represented in human memory for a shorter or longer period of time: Randomly generated cryptographic keys or passwords, computer-generated codes or identifiers to be entered manually into another system, spoken transfer of computer-generated codes or identifiers. 
 
-*syllab6* is designed to ease representation of binary data in human memory: Syllables are pronouncable and effectively stored in auditory memory, lowercase syllables are easily typed and easily stored in muscle memory, sequences of random syllables are likely to evoke meaning (by accidental similarity to real words) which additionally eases their memorability.
+*syllab6* is designed to ease representation of binary data in human memory: Syllables are pronouncable and effectively stored in auditory memory; lowercase syllables are easily read, easily typed and easily stored in muscle memory; sequences of random syllables are likely to evoke meaning (by accidental similarity to real words) which additionally eases their memorability.
 
 The characters included in *syllab6* were specifically chosen to generate pronouncably distinct syllables (in English) and reduce the likelihood of misinterpretation. The characters `c`, `j`, `q`, `u`, `w`, and `x` were deliberately excluded because they have several possible pronounciations or may be pronounced like or look similar to other included characters.
 
