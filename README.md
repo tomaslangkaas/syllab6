@@ -8,9 +8,9 @@ There are several use cases where arbitrary binary data needs to be represented 
 
 *syllab6* is designed to ease representation of binary data in human memory: Syllables are pronouncable and effectively stored in auditory memory; lowercase syllables are easily read, easily typed and easily stored in muscle memory; sequences of random syllables are likely to evoke meaning (by accidental similarity to real words) which additionally eases their memorability.
 
-The characters included in *syllab6* were specifically chosen to generate pronouncably distinct syllables (in English) and reduce the likelihood of misinterpretation. The characters `c`, `j`, `q`, `u`, `w`, and `x` were deliberately excluded because they have several possible pronounciations or may be pronounced like or look similar to other included characters.
+The characters included in *syllab6* were specifically chosen from the English alphabet to generate pronouncably distinct syllables (in English) and reduce the likelihood of misinterpretation. The characters `c`, `j`, `q`, `u`, `w`, and `x` were deliberately excluded because they have several possible pronounciations or may be pronounced like or look similar to other included characters.
 
-In *syllab6*, each syllable consists of one consonant (encoding 4 bits) followed by one vowel (encoding 2 bits). The tables below list the 20 characters of *syllab6*, with the corresponding binary value of each.
+In *syllab6*, each syllable consists of one consonant (encoding 4 bits) followed by one vowel (encoding 2 bits). *syllab6* is case-sensitive and only includes lowercase characters. The tables below list the 20 characters of *syllab6*, with the corresponding binary value of each.
 
 ### Consonants
 
@@ -94,14 +94,14 @@ Written presentations and string representations of *syllab6* allows all other t
 The table below presents different human-readable encodings of the same randomly generated 64 bits,
 `10100010 11001101 01111010 01100010 11100000 00010101 11000010 10000010`:
 
-| Encoding | Result |
+| Type of encoding | Encoded result |
 | -------- | ------ |
-| Hexadecimal | `a2 cd 7a 62 e0 15 c2 82`|
+| Hexadecimal | `a2cd7a62e015c282`|
 | Base64 | `os16YuAVwoI=` |
 | Ascii ([Z85](https://rfc.zeromq.org/spec:32/Z85/)) | `QrO0[&1:aX` |
 | syllab6 | `rasaveyi lasibake tarafa` |
 
-While the *syllab6* encoding is longer than the others, it is also likely easier to read, easier to type, easier to keep in short-term memory, and easier to memorize. If presented with a written presentation of arbitrary binary data that is to be manually entered into another system, all these benefits matter.
+While the *syllab6* encoding is longer than the others, it is also likely faster and easier to read, easier to type, easier to keep in short-term memory, and easier to memorize long-term. If presented with a written presentation of arbitrary binary data that is to be manually entered into another system, all these benefits matter.
 
 ## Licensing and usage rights
 
