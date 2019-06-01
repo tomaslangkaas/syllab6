@@ -1,9 +1,21 @@
-
-// written in ECMAScript 3 for maximum compatibility
+/**
+ * ECMAScript 3 functions for syllab6 encoding
+ * MIT Licensed, Copyright (c) 2019 Tomas Langkaas
+ * https://github.com/tomaslangkaas/syllab6
+ * 
+ * syllab6.fromOctets(octets)
+ *   takes an array of byte values and returns a string 
+ *   with the syllab6 representation of the binary data
+ * 
+ * syllab6.toOctets(syllab6)
+ *   takes a string with syllab6 representation of binary 
+ *   data and returns an array of the corresponding byte values
+ *  
+ */
 
 var syllab6 = {
   fromOctets: function (octets) {
-    var syllab6 = '',
+    var syllab6 = "",
       outlength = octets.length * 4 / 3,
       consonants = [
         "b", "d", "f", "g", 
@@ -29,14 +41,16 @@ var syllab6 = {
   },
   toOctets: function (syllab6) {
     var octets = [],
-      lookup = 'bdfghklmnprstvyzaeio',
+      lookup = "bdfghklmnprstvyzaeio",
       buffer,
       bits,
       position,
       value;
-    for (position = buffer = bits = 0;
+    for (
+      position = buffer = bits = 0;
       position < syllab6.length;
-      position++) {
+      position++
+    ) {
       value = lookup.indexOf(syllab6.charAt(position));
       if (value > -1) {
         if (value < 16) {
