@@ -6,11 +6,12 @@
  * syllab6.fromOctets(octets)
  *   takes an array of byte values and returns a string 
  *   with the syllab6 representation of the binary data
+ *   syllab6.fromOctets([0x4d, 0x61, 0x6e]) returns "hokidesi"
  * 
  * syllab6.toOctets(syllab6)
  *   takes a string with syllab6 representation of binary 
  *   data and returns an array of the corresponding byte values
- *  
+ *   syllab6.toOctets("hokidesi") returns [0x4d, 0x61, 0x6e]
  */
 
 var syllab6 = {
