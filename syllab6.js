@@ -67,6 +67,9 @@ var syllab6 = {
         }
       }
     }
+    if(bits){
+      octets.push((buffer << (8 - bits)) & 0xff);
+    }
     return octets;
   }
 };
