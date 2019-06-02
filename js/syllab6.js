@@ -3,10 +3,12 @@
  * MIT Licensed, Copyright (c) 2019 Tomas Langkaas
  * https://github.com/tomaslangkaas/syllab6
  * 
- * syllab6.fromOctets(octets)
+ * syllab6.fromOctets(octets[, delimit])
  *   takes an array of byte values and returns a string 
  *   with the syllab6 representation of the binary data:
  *   syllab6.fromOctets([0x4d, 0x61, 0x6e]) returns "hokidesi"
+ *   The delimit argument is optional, if set to a truthy value,
+ *   syllables are grouped in 4, delimited with a blank space
  * 
  * syllab6.toOctets(syllab6)
  *   takes a string with syllab6 representation of binary 
