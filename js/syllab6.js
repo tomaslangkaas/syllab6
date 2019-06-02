@@ -5,23 +5,23 @@
  * 
  * syllab6.fromOctets(octets)
  *   takes an array of byte values and returns a string 
- *   with the syllab6 representation of the binary data
+ *   with the syllab6 representation of the binary data:
  *   syllab6.fromOctets([0x4d, 0x61, 0x6e]) returns "hokidesi"
  * 
  * syllab6.toOctets(syllab6)
  *   takes a string with syllab6 representation of binary 
- *   data and returns an array of the corresponding byte values
+ *   data and returns an array of the corresponding byte values:
  *   syllab6.toOctets("hokidesi") returns [0x4d, 0x61, 0x6e]
  */
 
 var syllab6 = {
-  fromOctets: function (octets) {
+  fromOctets: function (octets, delimit) {
     var syllab6 = "",
       outlength = octets.length * 4 / 3,
       consonants = [
-        "b", "d", "f", "g", 
-        "h", "k", "l", "m", 
-        "n", "p", "r", "s", 
+        "b", "d", "f", "g",
+        "h", "k", "l", "m",
+        "n", "p", "r", "s",
         "t", "v", "y", "z"
       ],
       vowels = [
@@ -30,8 +30,12 @@ var syllab6 = {
       syllables = 0,
       position = 0,
       buffer = 0,
+      delimiter = delimit ? " " : "",
       value;
     while (syllables < outlength) {
+      if (((syllables - 1) % 4) === 3) {
+        syllab6 += delimiter;
+      }
       if ((syllables & 3) !== 3) {
         buffer = buffer << 8 | octets[position++];
       }
@@ -67,7 +71,7 @@ var syllab6 = {
         }
       }
     }
-    if(bits){
+    if (bits) {
       octets.push((buffer << (8 - bits)) & 0xff);
     }
     return octets;
