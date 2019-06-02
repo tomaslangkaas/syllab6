@@ -111,6 +111,8 @@ The idea of representing binary data as pronouncable text is not new. However, a
 
 ## Test vectors
 
+Some basic test vectors are listed below. A more extensive set of test vectors can be found in the folder [testvectors](https://github.com/tomaslangkaas/syllab6/tree/gh-pages/testvectors).
+
 ### Vector #1
 
 All 256 bytes from `00` to `ff`.
